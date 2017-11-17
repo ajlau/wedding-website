@@ -2,8 +2,10 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>#Maoalau2018</title>
+        <title>Andrew & Cat</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
+        <link rel="stylesheet" href="index.css">
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
     </head>
@@ -11,7 +13,7 @@
         <div class="ui container">
             <div class="ui tabular menu">
                 <div class="item header">Alau & Cat</div>
-                <div class="item active" data-tab="home">Our Wedding</div>
+                <div class="item active" data-tab="home">Home</div>
                 <div class="item" data-tab="details">Details</div>
                 <div class="item" data-tab="photos">Photos</div>
                 <div class="item" data-tab="registry">Registry</div>
@@ -48,9 +50,52 @@
                         Cras id neque et leo tempor blandit. Aenean commodo laoreet urna vel rhoncus. Maecenas nunc eros, sagittis nec metus at, porta auctor felis. Maecenas aliquet consectetur scelerisque. Morbi finibus tortor in nibh aliquet condimentum. Aenean hendrerit dui sapien, dapibus suscipit augue hendrerit non. Curabitur quis ex in mauris pellentesque eleifend. Nam dictum elit ipsum. Aliquam sit amet rhoncus nunc, non dignissim ligula. Quisque tempus, velit sit amet facilisis condimentum, ex nisi euismod purus, quis rhoncus sapien quam in dui. Interdum et malesuada fames ac ante ipsum primis in faucibus.
                     </p>
                 </div>
+                <div class="ui medium header">
+                    Accomodations
+                </div>
+                <div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elementum nisi suscipit risus porta consectetur. Quisque ut nulla rutrum, consequat purus non, volutpat leo. Nulla facilisi. Morbi congue leo sit amet ipsum sagittis, quis egestas ipsum accumsan. Integer id pretium urna, id vulputate velit. Quisque nec ante ut lacus lobortis blandit sit amet vel turpis. Aliquam nec lorem eu dolor congue vulputate eget eu dui. Quisque ut felis mattis, blandit elit in, efficitur purus. Donec vestibulum non metus eu euismod. Curabitur vel facilisis felis, et dapibus magna. Morbi pretium feugiat elit, in tincidunt dui maximus sed. Ut faucibus, arcu sed condimentum dapibus, ante quam blandit nisl, ac ornare mi est vitae dolor.
+                    </p>
+                </div>
             </div>
             <div class="ui bottom tab" data-tab="photos">
-                
+                <div class="ui five column grid container medium rounded images">
+                    <div class="column">
+                        <img class="ui image popupimage" src="/img/photo1.jpg">
+                    </div>
+                    <div class="column">
+                        <img class="ui image popupimage" src="/img/photo1.jpg">
+                    </div>
+                    <div class="column">
+                        <img class="ui image popupimage" src="/img/photo1.jpg">
+                    </div>
+                    <div class="column">
+                        <img class="ui image popupimage" src="/img/photo1.jpg">
+                    </div>
+                    <div class="column">
+                        <img class="ui image popupimage" src="/img/photo1.jpg">
+                    </div>
+                    <div class="column">
+                        <img class="ui image popupimage" src="/img/photo1.jpg">
+                    </div>
+                </div>
+                <div class="ui modal">
+                    <div class="content image">
+                        <div class="ui fluid image">
+                            <img class="ui fluid image" src=""/>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    $(document).ready(function(){
+                        $(".popupimage").click(function(event){
+                            event.preventDefault();
+                            $(".ui.modal img").attr("src", $(this).attr("src"));
+                            $(".ui.modal").modal("show");
+                        });
+                    });
+                </script>
             </div>
             <div class="ui bottom tab" data-tab="registry">
                 <div class="ui medium header">
@@ -58,8 +103,6 @@
                 </div>
             </div>
         </div>
-        <script>
-            $('.tabular.menu .item').tab();
-        </script>
+        <script src="/js/index.js"></script>
     </body>
 </html>
